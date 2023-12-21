@@ -18,7 +18,7 @@ class JavaIoNioNio2ApplicationTests {
     void contextLoads() throws IOException {
 
         new ReadFile(1024, resource.getFile().getPath())
-                .perform(bytes -> System.err.println("reading bytes: " + bytes));
+                .perform(bytes -> System.err.println("reading bytes: " + new String(bytes)));
     }
 
 }

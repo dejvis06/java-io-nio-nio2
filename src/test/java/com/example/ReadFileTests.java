@@ -16,9 +16,9 @@ class ReadFileTests {
 
     @Test
     void contextLoads() throws IOException {
+        ReadFile readFile = new ReadFile(1024, resource.getFile().getPath());
 
-        new ReadFile(1024, resource.getFile().getPath())
-                .perform(bytes -> System.err.println("reading bytes: " + new String(bytes)));
+        readFile.perform(bytes -> System.err.println("reading bytes (not enhanced): " + new String(bytes)));
+        readFile.performEnhanced(bytes -> System.err.println("reading bytes (enhanced): " + new String(bytes)));
     }
-
 }

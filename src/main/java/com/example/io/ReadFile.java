@@ -9,7 +9,7 @@ import java.util.function.Consumer;
 
 public class ReadFile {
 
-    Logger logger = LoggerFactory.getLogger(ReadFile.class);
+    private static final Logger logger = LoggerFactory.getLogger(ReadFile.class);
 
     private byte[] bytes;
     private String path;

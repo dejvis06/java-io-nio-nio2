@@ -9,14 +9,14 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.function.Consumer;
 
-public class ReadFile {
+public class FileReaderInputStream {
 
-    private static final Logger logger = LoggerFactory.getLogger(ReadFile.class);
+    private static final Logger logger = LoggerFactory.getLogger(FileReaderInputStream.class);
 
     private byte[] bytes;
     private String path;
 
-    public ReadFile(int length, String path) {
+    public FileReaderInputStream(int length, String path) {
         this.bytes = new byte[length];
         this.path = path;
     }

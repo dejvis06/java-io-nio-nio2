@@ -1,6 +1,6 @@
 package com.example;
 
-import com.example.io.ReadFile;
+import com.example.io.FileReaderInputStream;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -16,7 +16,7 @@ class ReadFileTests {
 
     @Test
     void contextLoads() throws IOException {
-        ReadFile readFile = new ReadFile(1024, resource.getFile().getPath());
+        FileReaderInputStream readFile = new FileReaderInputStream(1024, resource.getFile().getPath());
 
         readFile.perform(bytes -> System.err.println("reading bytes (not enhanced): " + new String(bytes)));
         readFile.performEnhanced(bytes -> System.err.println("reading bytes (enhanced): " + new String(bytes)));

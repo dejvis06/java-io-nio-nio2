@@ -31,7 +31,7 @@ public class SequenceInputStreamTests {
         read(System.err::print, sequenceInputStream);
     }
 
-    public void read(Consumer<Character> consumer, InputStream inputStream) throws IOException {
+    void read(Consumer<Character> consumer, InputStream inputStream) throws IOException {
         try {
             int bytesRead = 0;
             while ((bytesRead = inputStream.read()) != -1) {

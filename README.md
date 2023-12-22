@@ -90,7 +90,7 @@ This class is useful when there is a need to concatenate multiple `InputStreams`
         read(System.err::print, sequenceInputStream);
     }
 
-    public void read(Consumer<Character> consumer, InputStream inputStream) throws IOException {
+    void read(Consumer<Character> consumer, InputStream inputStream) throws IOException {
         try {
             int bytesRead = 0;
             while ((bytesRead = inputStream.read()) != -1) {

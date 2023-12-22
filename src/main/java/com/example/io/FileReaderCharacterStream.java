@@ -23,6 +23,13 @@ public class FileReaderCharacterStream {
         this.path = Objects.requireNonNull(path, "Path cannot be null");
     }
 
+    /**
+     * Reads characters from a file using a character stream and provides them to the consumer.
+     * This method utilizes try-with-resources to ensure the automatic closing of the character stream.
+     *
+     * @param consumer A consumer function that processes the read character data.
+     * @throws IOException If an I/O error occurs during the read operation.
+     */
     public void perform(Consumer<char[]> consumer) throws IOException {
         try (Reader reader = new FileReader(path)) {
 

@@ -16,7 +16,10 @@ class CharacterStreamTests {
 
     @Test
     void contextLoads() throws IOException {
-        new FileReaderCharacterStream(10, inputResource.getFile().getPath())
-                .perform(System.err::println);
+        FileReaderCharacterStream characterStreamReader
+                = new FileReaderCharacterStream(10, inputResource.getFile().getPath());
+
+        characterStreamReader.perform(System.err::println);
+        characterStreamReader.performEnhanced(System.err::println);
     }
 }

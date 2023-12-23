@@ -2,6 +2,7 @@
 
 ## FileReaderInputStream
 
+InputStreams are used for handling byte data.
 The `FileReaderInputStream` class provides functionality for reading data from a file using a `FileInputStream`. It is designed to read the file in chunks, represented by byte arrays, and allows processing each chunk of data using a `Consumer<byte[]>` callback. The class also includes an enhanced reading method that utilizes buffering for improved efficiency.
 
 #### Constructor
@@ -31,6 +32,8 @@ public void performEnhanced(Consumer<byte[]> consumer) throws IOException
 4. Processes each chunk of read data using the provided Consumer<byte[]> callback.
 
 ## FileReaderCharacterStream
+
+Readers are suitable for handling human readable text.
 
 #### Methods
 
@@ -101,3 +104,33 @@ This class is useful when there is a need to concatenate multiple `InputStreams`
         }
     }
 ```
+
+## Data Streams
+The DataInputStream and DataOutputStream are used to work with binary data. 
+
+```java
+@Test
+    void contextLoads() throws IOException {
+        try (DataOutputStream dos = new DataOutputStream(new FileOutputStream("data.bin"))) {
+            // Writing Metadata
+            dos.writeUTF("EmployeeID");
+            dos.writeUTF("Name");
+            dos.writeUTF("Salary");
+            
+            ...
+            
+        try (DataOutputStream dos = new DataOutputStream(new FileOutputStream("data.bin"))) {
+            // Writing Metadata
+            dos.writeUTF("EmployeeID");
+            dos.writeUTF("Name");
+            dos.writeUTF("Salary");
+
+            System.out.println("Metadata: [" + field1 + ", " + field2 + ", " + field3 + "]");
+
+            // Reading Data Records
+            int employeeID = dis.readInt();
+            String name = dis.readUTF();
+            double salary = dis.readDouble();
+```
+
+Metadata or other ways are needed to specify the structure of the bin file.

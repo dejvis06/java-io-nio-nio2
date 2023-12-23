@@ -1,0 +1,15 @@
+// Metadata: [FieldType, FieldName]
+[INT, "EmployeeID"]
+[STRING, "Name"]
+[DOUBLE, "Salary"]
+
+// Data Records:
+// Record 1
+1                   // EmployeeID (int)
+John Doe             // Name (String)
+50000.0              // Salary (double)
+
+// Record 2
+2
+Jane Smith
+60000.0

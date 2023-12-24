@@ -22,7 +22,6 @@ public class ClientAudio {
             sendCommand(outputStream, "SEEK");
             sendCommand(outputStream, "CLOSE");*/
 
-            // Optionally, you can read and process audio data from the server
             processAudio(inputStream, mediaPlayer);
 
         } catch (IOException e) {

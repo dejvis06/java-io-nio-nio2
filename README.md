@@ -232,7 +232,7 @@ try (Socket socket = new Socket(SERVER_ADDRESS, PORT);
      OutputStream outputStream = socket.getOutputStream()) {
 
         // Send commands to the server
-        // sendCommand(outputStream, "PLAY");
+        sendCommand(outputStream, "PLAY");
         /*sendCommand(outputStream, "STOP");
         sendCommand(outputStream, "SEEK");
         sendCommand(outputStream, "CLOSE");*/

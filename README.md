@@ -154,6 +154,8 @@ The DataInputStream and DataOutputStream are used to work with binary data.
 
 Metadata or other ways are needed to specify the structure of the bin file.
 
+<br>
+
 # Java NIO
 
 ### Channel

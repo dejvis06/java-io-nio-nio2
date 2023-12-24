@@ -236,8 +236,7 @@ try (Socket socket = new Socket(SERVER_ADDRESS, PORT);
         /*sendCommand(outputStream, "STOP");
         sendCommand(outputStream, "SEEK");
         sendCommand(outputStream, "CLOSE");*/
-
-        // Optionally, you can read and process audio data from the server
+        
         processAudio(inputStream, mediaPlayer);
 }
 ```

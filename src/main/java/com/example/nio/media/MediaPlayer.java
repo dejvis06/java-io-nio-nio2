@@ -4,5 +4,5 @@ import java.nio.ByteBuffer;
 
 @FunctionalInterface
 public interface MediaPlayer {
-    void render(ByteBuffer bytes);
+    void render(ByteBuffer byteBuffer);
 }

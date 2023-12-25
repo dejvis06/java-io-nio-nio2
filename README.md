@@ -153,7 +153,6 @@ The DataInputStream and DataOutputStream are used to work with binary data.
 ```
 
 Metadata or other ways are needed to specify the structure of the bin file.
-
 <br>
 
 # Java NIO
@@ -242,6 +241,27 @@ try (Socket socket = new Socket(SERVER_ADDRESS, PORT);
         processAudio(inputStream, mediaPlayer);
 }
 ```
+
+</br>
+
+# Java NIO2
+
+Examples in test class under nio2 package.
+
+#### FileSystem
+
+This example demonstrates various features of the `java.nio.file.FileSystem` in Java NIO. The code covers listing/filtering directory contents, traversing directory trees, visiting directories or files, and watching directory events.
+
+```java
+Path directoryPath = Paths.get(resource.getURI().getPath());
+listAndFilterDirectoryContents(directoryPath);
+traverseDirectoryTree(directoryPath);
+visitDirectoryOrFile(directoryPath);
+watchDirectory(directoryPath);
+```
+
+##### Non Blocking
+The method `watchDirectory` utilizes a `WatchService` to watch a directory for creation, deletion, and modification events in a non-blocking manner.
 
 
 

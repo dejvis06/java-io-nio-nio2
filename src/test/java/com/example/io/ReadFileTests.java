@@ -1,4 +1,4 @@
-package com.example;
+package com.example.io;
 
 import com.example.io.FileReaderInputStream;
 import org.junit.jupiter.api.Test;
@@ -15,7 +15,7 @@ class ReadFileTests {
     Resource resource;
 
     @Test
-    void contextLoads() throws IOException {
+    void test() throws IOException {
         FileReaderInputStream readFile = new FileReaderInputStream(1024, resource.getFile().getPath());
 
         readFile.perform(bytes -> System.err.println("reading bytes (not enhanced): " + new String(bytes)));

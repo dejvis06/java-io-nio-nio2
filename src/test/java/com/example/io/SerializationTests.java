@@ -1,4 +1,4 @@
-package com.example;
+package com.example.io;
 
 import com.example.io.Serialize;
 import org.junit.jupiter.api.Test;
@@ -11,7 +11,7 @@ import java.io.Serializable;
 public class SerializationTests {
 
     @Test
-    void contextLoads() throws IOException, ClassNotFoundException {
+    void test() throws IOException, ClassNotFoundException {
         MyClass myClass = new MyClass("test", 1);
         byte[] bytes = Serialize.serialize(myClass);
         System.err.println(new String(bytes));

@@ -1,4 +1,4 @@
-package com.example;
+package com.example.io;
 
 import com.example.io.FileReaderCharacterStream;
 import org.junit.jupiter.api.Test;
@@ -15,7 +15,7 @@ class CharacterStreamTests {
     Resource inputResource;
 
     @Test
-    void contextLoads() throws IOException {
+    void test() throws IOException {
         FileReaderCharacterStream characterStreamReader
                 = new FileReaderCharacterStream(10, inputResource.getFile().getPath());
 

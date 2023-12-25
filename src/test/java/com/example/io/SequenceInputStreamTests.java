@@ -1,4 +1,4 @@
-package com.example;
+package com.example.io;
 
 import com.example.io.CompositeSequenceInputStream;
 import org.junit.jupiter.api.Test;
@@ -19,7 +19,7 @@ public class SequenceInputStreamTests {
     Resource resource;
 
     @Test
-    void contextLoads() throws IOException {
+    void test() throws IOException {
 
         FileInputStream inputStream = new FileInputStream(resource.getFile().getPath());
         FileInputStream inputStream1 = new FileInputStream(resource.getFile().getPath());

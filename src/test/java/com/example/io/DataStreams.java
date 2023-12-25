@@ -1,4 +1,4 @@
-package com.example;
+package com.example.io;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -18,7 +18,7 @@ public class DataStreams {
      * - Utilizes DataInputStream for reading metadata and data records from the binary file.
      */
     @Test
-    void contextLoads() throws IOException {
+    void test() throws IOException {
         try (DataOutputStream dos = new DataOutputStream(new FileOutputStream("data.bin"))) {
             // Writing Metadata
             dos.writeUTF("EmployeeID");
